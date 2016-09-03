@@ -1,0 +1,13 @@
+{
+  "name": "Just a Forkbomb",
+  "description": "Literally just a forkbomb",
+  "keywords": [
+    "go",
+    "fork",
+    "bomb"
+  ],
+  "image": "heroku/go:1.6",
+  "mount_dir": "src/github.com/jer/justaforkbomb.com",
+  "website": "http://justaforkbomb.com",
+  "repository": "http://github.com/jer/justaforkbomb.com"
+}

@@ -1,0 +1,9 @@
+{
+	"ImportPath": "github.com/jer/justaforkbomb.com",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v71",
+	"Packages": [
+		"./..."
+	],
+	"Deps": []
+}
