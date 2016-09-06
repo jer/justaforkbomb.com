@@ -7,12 +7,15 @@ import (
 	"os"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, ":(){ :|: & };:")
+type forkbombserver string
+
+func (f forkbombserver) ServeHTTP(w http.ResponseWriter, req *http.Request) {
+	fmt.Fprintln(w, f)
 }
 
 func main() {
+	var f forkbombserver
+	f = ":(){ :|: & };:"
 	listen := fmt.Sprintf(":%s", os.Getenv("PORT"))
-	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe(listen, nil))
+	log.Fatal(http.ListenAndServe(listen, f))
 }
