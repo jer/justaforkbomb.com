@@ -10,6 +10,7 @@ import (
 type forkbombserver string
 
 func (f forkbombserver) ServeHTTP(w http.ResponseWriter, req *http.Request) {
+	log.Println(req)
 	fmt.Fprintln(w, f)
 }
 
