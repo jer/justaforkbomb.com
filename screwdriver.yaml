@@ -11,4 +11,4 @@ jobs:
             - gofmt: "find . -name '*.go' | xargs gofmt -s -w"
             - test: go test ./...
             - build: go build -a -o justaforkbomb.com
-            - functionaltest: "PORT=8080 ./justaforkbomb.com & curl localhost:8080; pkill justaforkbomb.com"
+            - functionaltest: "PORT=8080 ./justaforkbomb.com & curl localhost:8080 | bash"
